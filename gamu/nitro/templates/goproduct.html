@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="columns is-multiline mb-6">
+    <div class="column is-12 has-text-centered mt-6 mb-6">
+        <h2 class="is-size-3">Newest products</h2>
+    </div>
+
+    {% for goproduct in newest_products %}
+    <div class="column is-3 product-list-item">
+        <div class="box">
+            <figure class="image is-4by3 mb-4">
+                <img src="{{ goproduct.get_thumbnail }}">
+            </figure>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+{% endblock %}
